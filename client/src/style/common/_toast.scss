@@ -1,0 +1,50 @@
+.toast-base {
+    border-radius: 10px;
+
+    .toast {
+        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.30);
+        border-radius: 10px;
+        min-height: 50px;
+
+        .toast-body {
+            color: #95a5a6;
+        }
+
+        .toast-progress {
+            height: 3px;
+            background: #dce3e7;
+        }
+    }
+}
+
+
+
+@keyframes slideIn {
+    from {
+        transform: translate3d(110%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideIn {
+    animation-name: slideIn;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        visibility: hidden;
+        transform: translate3d(110%, 0, 0);
+    }
+}
+
+.slideOut {
+    animation-name: slideOut;
+}

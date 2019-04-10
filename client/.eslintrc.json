@@ -11,6 +11,8 @@
         "react"
     ],
     "rules":{
+        "arrow-body-style": [ 1 ],
+        
         "indent": [ 2, 4 ],
 
         "prefer-const": 1,

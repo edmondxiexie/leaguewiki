@@ -5,7 +5,9 @@ import store from './store/store';
 
 import App from './components/App';
 
+import 'antd/dist/antd.css';
 import './style/index.scss';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 ReactDOM.render(

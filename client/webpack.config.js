@@ -69,5 +69,11 @@ module.exports = {
     ],
 
     mode: 'development',
-    resolve: {},
+
+    resolve: {
+        alias: {
+            Components: path.resolve(__dirname, 'src/components/'),
+            Containers: path.resolve(__dirname, 'src/containers/'),
+        },
+    },
 };
