@@ -8,6 +8,7 @@ import App from './components/App';
 import 'antd/dist/antd.css';
 import './style/index.scss';
 import 'react-toastify/dist/ReactToastify.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 ReactDOM.render(

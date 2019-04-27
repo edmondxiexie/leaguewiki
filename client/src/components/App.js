@@ -4,14 +4,19 @@ import { notify } from 'reapop';
 import theme from 'reapop-theme-wybo';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import {
+    ToastContainer,
+    toast,
+    cssTransition,
+} from 'react-toastify';
 
 import NotiTestContainer from 'Containers/noti-test/NotiTestContainer';
 import { logoutUtil } from '../utils/authUtil';
 import Login from './login/Login';
 import Navbar from './Navbar';
 import Notification from './notification/Notification';
+import Display from './display/Display';
 
-import { ToastContainer, toast, cssTransition } from 'react-toastify';
 
 const ToastSlide = cssTransition({
     enter: 'slideIn',
@@ -28,7 +33,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                Hello worldie
+                Hello world
                 <Notification />
                 <ToastContainer
                     className="toast-base"
@@ -39,6 +44,7 @@ class App extends Component {
                     closeButton={ false }
                     autoClose={ 50000 }
                 />
+                <Display />
             </div>
         );
     }
