@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { notify } from 'reapop';
-import theme from 'reapop-theme-wybo';
-import axios from 'axios';
-import { connect } from 'react-redux';
 
-import NotiTestContainer from 'Containers/noti-test/NotiTestContainer';
 import { logoutUtil } from '../utils/authUtil';
 import Login from './login/Login';
 import Navbar from './Navbar';
 import Notification from './notification/Notification';
+import ItemsPage from './items-page/ItemsPage';
 
-import { ToastContainer, toast, cssTransition } from 'react-toastify';
+import itemsApi from '../api/items';
 
-const ToastSlide = cssTransition({
-    enter: 'slideIn',
-    exit: 'slideOut',
-    duration: 300,
-});
 
 class App extends Component {
     constructor(props) {
@@ -25,20 +15,21 @@ class App extends Component {
         this.state = {};
     }
 
+    componentDidMount() {
+        itemsApi.getItems().then((res) => {
+            const data = res.data.data;
+
+            for (const itemId of Object.keys(data)) {
+                console.log(data[itemId].name);
+            }
+        });
+    }
+
     render() {
         return (
-            <div>
+            <div className="app-base">
                 Hello worldie
-                <Notification />
-                <ToastContainer
-                    className="toast-base"
-                    toastClassName="toast"
-                    bodyClassName="toast-body"
-                    progressClassName="toast-progress"
-                    transition={ ToastSlide }
-                    closeButton={ false }
-                    autoClose={ 50000 }
-                />
+                <ItemsPage />
             </div>
         );
     }
