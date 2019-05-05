@@ -10,6 +10,7 @@ import { logoutUtil } from '../utils/authUtil';
 import Login from './login/Login';
 import Navbar from './Navbar';
 import Notification from './notification/Notification';
+import LaptopIMG from '../images/laptop.jpeg';
 
 import { ToastContainer, toast, cssTransition } from 'react-toastify';
 
