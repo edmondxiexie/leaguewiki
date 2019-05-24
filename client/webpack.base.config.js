@@ -23,6 +23,14 @@ module.exports = {
         compress: true,
         hot: true,
         open: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:5000',
+                // pathRewrite: {
+                //     '/api': '',
+                // },
+            },
+        },
     },
 
     entry: './src/index.js',
@@ -49,6 +57,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                exclude: /node_modeles/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',

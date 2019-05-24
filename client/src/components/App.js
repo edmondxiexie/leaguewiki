@@ -29,7 +29,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                Hello worldie
+                Hello world
                 <Notification />
                 <ToastContainer
                     className="toast-base"
