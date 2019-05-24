@@ -10,6 +10,7 @@ import { logoutUtil } from '../utils/authUtil';
 import Login from './login/Login';
 import Navbar from './Navbar';
 import Notification from './notification/Notification';
+import LaptopIMG from '../images/laptop.jpeg';
 
 import { ToastContainer, toast, cssTransition } from 'react-toastify';
 
@@ -28,7 +29,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                Hello worldie
+                Hello world
                 <Notification />
                 <ToastContainer
                     className="toast-base"
